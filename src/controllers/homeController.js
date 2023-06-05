@@ -1,9 +1,13 @@
+const router = require('express').Router()
 const cubes = require('../db.json');
 
-exports.index = (req, res) => {
-    res.render('index', {cubes}); // при всяка заявка към '/home/index', отива в index.hbs, където чрез темплейта от "partials - cube", динамично рендерира наличните кубчета
-} 
+// при всяка заявка към '/', отиди в index.hbs, където чрез темплейта от "partials - cube", динамично рендерира наличните кубчета
+router.get('/', (req, res) => {
+    res.render('index', { cubes });
+});
 
-exports.about = (req, res) => {
+router.get('/about', (req, res) => {
     res.render('about');
-}
+});
+
+module.exports = router;
