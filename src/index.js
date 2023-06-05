@@ -8,11 +8,11 @@ app.engine('hbs', handlebars.engine({
     extname: 'hbs'
 }));
 app.set('view engine', 'hbs');
-app.set('views', './src/views'); 
+app.set('views', './src/views');
 
 // всяка заявка към "static" се да се насочва към "public"
 app.use('/static', express.static('public'));
-app.use('/images', express.static('public'));
+
 
 app.get('/', (req, res) => {
     res.render('index');
