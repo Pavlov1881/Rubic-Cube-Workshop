@@ -11,6 +11,7 @@ app.engine('hbs', handlebars.engine({
 app.set('view engine', 'hbs');
 app.set('views', './src/views');
 
+// ПРИ ВСИЧКИ ЗАЯВКИ ИЗПОЛЗВАЙ ТОЗИ РУТЕР
 app.use(routes);
 
 app.listen(5000, () => console.log(`App is listening on port 5000`));
