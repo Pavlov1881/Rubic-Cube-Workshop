@@ -1,8 +1,8 @@
-const express = require('experss');
+const experss = require('express');
 
 const homeController = require('./controllers/homeController');
 
-const router = express.Router();
+const router = experss.Router();
 
 router.get('/', homeController.index);
 
