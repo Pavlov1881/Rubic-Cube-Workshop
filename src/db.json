@@ -25,5 +25,11 @@
         "description": "test",
         "imageUrl": "test image",
         "difficultyLevel": "1"
+    },
+    {
+        "name": "XXXX",
+        "description": "sdaddadsasd",
+        "imageUrl": "https://img.freepik.com/free-photo/free-photo-happy-birthday-background-wallpaper_1340-29831.jpg?w=740&t=st=1685444106~exp=1685444706~hmac=cf920f41b263fb21b9253c4be349c36eb052239458b5ee8a7bee2e608e7b2934",
+        "difficultyLevel": "6"
     }
 ]
