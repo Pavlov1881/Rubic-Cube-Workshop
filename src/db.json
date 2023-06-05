@@ -19,5 +19,11 @@
         "description": "This is a classic Rubik Cube",
         "imageUrl": "https://s13emagst.akamaized.net/products/24992/24991513/images/res_a3444ad522c2a4eea05e56ce58846400.jpg",
         "difficultyLevel": "3"
+    },
+    {
+        "name": "test",
+        "description": "test",
+        "imageUrl": "test image",
+        "difficultyLevel": "1"
     }
 ]
