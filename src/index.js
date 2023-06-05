@@ -5,6 +5,9 @@ const app = express();
 
 app.use('/static', express.static('public'));
 
+// всяка POST заявка минава през "urlencoded", което е "middleware" на "express" и парсва данните в обект, който достъпваме в "req.body" 
+app.use(express.urlencoded({ extended: false }));
+
 app.engine('hbs', handlebars.engine({
     extname: 'hbs'
 }));
