@@ -10,7 +10,7 @@ exports.getOne = (cubeId) => cubes[cubeId]; // приема cubeId и връща
 exports.getAll = (search = '', from = 0, to = 6) => {
     const result = cubes
         .filter(x => x.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()))
-        .filter(x => x.difficultyLevel >= from || x.difficultyLevel <= to);
+        .filter(x => x.difficultyLevel >= from && x.difficultyLevel <= to); 
     return result
 };
 
