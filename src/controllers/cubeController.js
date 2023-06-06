@@ -25,8 +25,10 @@ router.post('/create', async (req, res) => {
     }
 });
 
+// рутер за details page
 router.get('/details/:id', (req, res) => {
-    res.render('details');
+    const cube = cubeService.getOne(req.params.id)  // взимаме ид-то от параметрите на request
+    res.render('details', { cube });  // взимаме конкретния куб и рендерираме детайлите му
 });
 
 module.exports = router;

@@ -11,3 +11,4 @@ exports.save = (cube) => {
     return fs.writeFile(path.resolve('src', 'db.json'), JSON.stringify(cubes, '', 4), { encoding: 'utf-8' });
 }
 
+exports.getOne = (cubeId) => cubes[cubeId]; // приема cubeId и връща от масива с кубовете cubeId
