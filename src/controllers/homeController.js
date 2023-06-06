@@ -1,8 +1,12 @@
 const router = require('express').Router()
-const cubes = require('../db.json');
+const cubeService = require('../services/cubeService')
 
 // при всяка заявка към '/', отиди в index.hbs, където чрез темплейта от "partials - cube", динамично рендерира наличните кубчета
 router.get('/', (req, res) => {
+
+    let {search, from, to} = req.query // взимаме стринга от search полето
+
+    const cubes = cubeService.getAll(search, from, to); // извиква getAll от сървизите и взима всички кубове
     res.render('index', { cubes });
 });
 
