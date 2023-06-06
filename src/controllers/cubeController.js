@@ -18,11 +18,15 @@ router.post('/create', async (req, res) => {
 
     // запазваме на данните
     try {
-       await cubeService.save(cube);  // викаме SAVE функцията от SERVICE папката и подаваме куба от заявката
+        await cubeService.save(cube);  // викаме SAVE функцията от SERVICE папката и подаваме куба от заявката
         res.redirect('/');
     } catch (error) {
         res.status(400).send(error);
     }
+});
+
+router.get('/details/:id', (req, res) => {
+    res.render('details');
 });
 
 module.exports = router;
